@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>HealthyAI Apps - Professional AI-Powered Applications</title>
+    <meta name="description" content="Professional AI-powered applications designed to enhance your productivity and wellness. Discover HealthyAI and GradeGrind - innovative tools built with cutting-edge technology." />
+    <meta property="og:title" content="HealthyAI LLC - Professional AI-Powered Applications" />
+    <meta property="og:description" content="Professional AI-powered applications designed to enhance your productivity and wellness. Discover HealthyAI and GradeGrind - innovative tools built with cutting-edge technology." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --dark-primary: hsl(0, 0%, 10.2%);
+        --dark-secondary: hsl(0, 0%, 17.6%);
+        --dark-accent: hsl(207, 90%, 54%);
+      }
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--dark-primary);
+        color: hsl(203, 23%, 90%);
+        line-height: 1.6;
+      }
+      
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+      
+      .nav {
+        background: var(--dark-secondary);
+        border-bottom: 1px solid hsl(220, 13%, 28%);
+        padding: 1rem 0;
+      }
+      
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .nav h1 {
+        color: #f1f5f9;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .nav a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .nav a:hover { color: #f1f5f9; }
+      
+      .hero {
+        background: linear-gradient(to bottom right, var(--dark-primary), var(--dark-secondary), var(--dark-primary));
+        padding: 5rem 0;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #f1f5f9;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.25rem;
+        color: #cbd5e1;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .apps-section {
+        background: var(--dark-secondary);
+        padding: 5rem 0;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #f1f5f9;
+        margin-bottom: 1rem;
+      }
+      
+      .section-title p {
+        font-size: 1.125rem;
+        color: #cbd5e1;
+      }
+      
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .app-card {
+        background: var(--dark-primary);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .app-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+      
+      .app-logo {
+        width: 128px;
+        height: 128px;
+        margin: 0 auto 1.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .app-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .app-card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #f1f5f9;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      .app-card p {
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .btn {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .btn-primary {
+        background: var(--dark-accent);
+        color: white;
+      }
+      
+      .btn-secondary {
+        background: #4b5563;
+        color: white;
+      }
+      
+      .btn-success {
+        background: #059669;
+        color: white;
+      }
+      
+      .btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+      }
+      
+      .features {
+        background: var(--dark-primary);
+        padding: 5rem 0;
+      }
+      
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      
+      .feature-card {
+        text-align: center;
+        padding: 1.5rem;
+      }
+      
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--dark-accent);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.25rem;
+      }
+      
+      .feature-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #f1f5f9;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-card p {
+        color: #cbd5e1;
+      }
+      
+      .footer {
+        background: var(--dark-secondary);
+        border-top: 1px solid hsl(220, 13%, 28%);
+        padding: 3rem 0;
+        text-align: center;
+      }
+      
+      .footer h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #f1f5f9;
+        margin-bottom: 1rem;
+      }
+      
+      .footer p {
+        color: #94a3b8;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        color: #94a3b8;
+        font-size: 0.875rem;
+      }
+      
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem; }
+        .hero p { font-size: 1rem; }
+        .apps-grid { grid-template-columns: 1fr; }
+        .footer-info { flex-direction: column; gap: 0.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-content">
+          <h1>HealthyAI Apps</h1>
+          <a href="#home">Professional AI Apps</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>HealthyAI Apps</h1>
+        <p>
+          Professional AI-powered applications designed to enhance your productivity and wellness. 
+          Discover our suite of innovative tools built with cutting-edge technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section class="apps-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Applications</h2>
+          <p>Explore our collection of AI-powered applications, each designed with user experience and functionality in mind.</p>
+        </div>
+        
+        <div class="apps-grid">
+          <!-- HealthyAI App Card -->
+          <div class="app-card">
+            <div class="app-logo" style="background: #3b82f6;">
+              <img src="HealthyAI_1754268678509.png" alt="HealthyAI Logo - Cute food characters" />
+            </div>
+            <h3>HealthyAI</h3>
+            <p>
+              AI-powered nutrition and wellness companion that helps you make healthier food choices 
+              and maintain a balanced lifestyle with personalized recommendations.
+            </p>
+            <div class="button-group">
+              <a href="healthyai-terms.html" class="btn btn-primary">Terms & Conditions</a>
+              <a href="privacy-policy.html" class="btn btn-secondary">Privacy Policy</a>
+              <a href="support.html" class="btn btn-success">Support</a>
+            </div>
+          </div>
+
+          <!-- GradeGrind App Card -->
+          <div class="app-card">
+            <div class="app-logo" style="background: #4338ca;">
+              <img src="GradeGrind_1754268678503.png" alt="GradeGrind Logo - Brain with lightning bolt" />
+            </div>
+            <h3>GradeGrind</h3>
+            <p>
+              Advanced AI study companion that revolutionizes learning through intelligent tutoring, 
+              progress tracking, and personalized study plans to maximize academic performance.
+            </p>
+            <div class="button-group">
+              <a href="gradegrind-terms.html" class="btn btn-primary">Terms & Conditions</a>
+              <a href="gradegrind-privacy.html" class="btn btn-secondary">Privacy Policy</a>
+              <a href="gradegrind-support.html" class="btn btn-success">Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Choose HealthyAI Apps?</h2>
+          <p>Professional-grade applications with enterprise-level support</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI-Powered</h3>
+            <p>Advanced artificial intelligence drives our applications for superior user experience</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon" style="background: #059669;">🔒</div>
+            <h3>Secure & Private</h3>
+            <p>Your data privacy and security are our top priorities with end-to-end encryption</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon" style="background: #7c3aed;">📱</div>
+            <h3>Cross-Platform</h3>
+            <p>Available across all devices with seamless synchronization and responsive design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <h3>HealthyAI Apps</h3>
+        <p>Professional AI-powered applications for modern life</p>
+        <div class="footer-info">
+          <span>© 2024 HealthyAI Apps. All rights reserved.</span>
+          <span>•</span>
+          <span>Professional Grade Applications</span>
+          <span>•</span>
+          <span>Enterprise Support Available</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
